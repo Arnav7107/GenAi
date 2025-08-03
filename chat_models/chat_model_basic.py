@@ -54,7 +54,7 @@ if not api_key:
     raise ValueError("GEMINI_API_KEY is not set")
 
 os.environ["GEMINI_API_KEY"] = api_key
-print("GEMINI_API_KEY set:", os.environ.get("GEMINI_API_KEY"))
+# print("GEMINI_API_KEY set:", os.environ.get("GEMINI_API_KEY"))
 
 # Initialize model using Google Gemini via LangChain
 model = init_chat_model("gemini-2.5-flash", model_provider="google_genai")
