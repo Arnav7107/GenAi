@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-parser = StrOutputParser()
+str_parser = StrOutputParser()
 
 prompt1 = PromptTemplate(
     template = "Write a detailed description on the following topic: {topic} in almost 500 words. ",
@@ -19,7 +19,6 @@ prompt2 = PromptTemplate(
 
 model = ChatGoogleGenerativeAI(model = "gemini-2.5-flash")
 
-chain = prompt1 | model | parser | prompt2 | model | parser
+chain = prompt1 | model | str_parser | prompt2 | model | str_parser
 
 result = chain.invoke({"topic" : "football"})
-
