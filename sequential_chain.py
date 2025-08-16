@@ -8,7 +8,7 @@ load_dotenv()
 str_parser = StrOutputParser()
 
 prompt1 = PromptTemplate(
-    template = "Write a detailed description on the following topic: {topic} in almost 500 words. ",
+    template = "Write a detailed description on the following topic: {topic} in almost 200 words. ",
     input_types = ["topic"]
 )
 
